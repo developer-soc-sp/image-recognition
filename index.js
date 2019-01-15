@@ -26,7 +26,7 @@ app.get("/test", function (req, res) {
             // HTTP Status: 200 : OK
             // Content Type: text/plain
             res.writeHead(200, { 'Content-Type': 'text/plain' });
-            let imgs = response.images;
+            let imgs = response.images.value;
             // Send the response body as "Hello World"
             res.end('Hello World\n' + imgs.classifiers + result);
         }
