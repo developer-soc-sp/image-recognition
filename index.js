@@ -9,7 +9,7 @@ var fs = require('fs');
 
 var visualRecognition = new VisualRecognitionV3({
   version: '2018-03-19',
-  iam_apikey: 'c5f5a7a00ea582223e8e5f4682d375dd41ec46b9'
+  iam_apikey: 'Ae8wfpNwYI-OU88zzvem1L7iH0LzfUxdK1SElGV5VZQa'
 });
 
 
