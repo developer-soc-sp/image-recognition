@@ -28,7 +28,7 @@ app.get("/test", function (req, res) {
             res.writeHead(200, { 'Content-Type': 'text/plain' });
 
             // Send the response body as "Hello World"
-            res.end('Hello World\n' + response.images + result);
+            res.end('Hello World\n' + response.images.classifiers + result);
         }
     });
 
