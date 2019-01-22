@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 
 
-app.get("/test", function (req, res) {
+app.get("/image-test", function (req, res) {
 
     var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
 
@@ -21,7 +21,8 @@ app.get("/test", function (req, res) {
             console.log(err);
         else {
             let result = JSON.stringify(response, null, 2);
-            console.log(result);
+            console.log(response.images.constructor.name);
+            console.log(response.images[0].classifiers[0].classes[0]);
             // Send the HTTP header 
             // HTTP Status: 200 : OK
             // Content Type: text/plain
@@ -36,7 +37,7 @@ app.get("/test", function (req, res) {
 
 
 //var listener = app.listen(process.env.PORT,process.env.IP,function(){
-var listener = app.listen(process.env.PORT, process.env.IP, function () {
+var listener = app.listen(4000, process.env.IP, function () {
     console.log("server has started");
     console.log('Listening on port ' + listener.address().port);
 });
